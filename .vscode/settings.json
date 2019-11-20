@@ -1,0 +1,24 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#fffd33",
+    "activityBar.activeBorder": "#00bfbd",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#00bfbd",
+    "activityBarBadge.foreground": "#15202b",
+    "titleBar.activeBackground": "#fffc00",
+    "titleBar.inactiveBackground": "#fffc0099",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveForeground": "#15202b99",
+    "statusBar.background": "#fffc00",
+    "statusBarItem.hoverBackground": "#ccca00",
+    "statusBar.foreground": "#15202b"
+  },
+  "peacock.color": "#fffc00",
+  "cSpell.words": [
+    "Ducimus",
+    "adipisicing",
+    "consectetur",
+    "elit"
+  ]
+}
