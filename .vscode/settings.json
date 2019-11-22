@@ -1,20 +1,20 @@
 {
   "workbench.colorCustomizations": {
-    "activityBar.background": "#fffd33",
-    "activityBar.activeBorder": "#00bfbd",
-    "activityBar.foreground": "#15202b",
-    "activityBar.inactiveForeground": "#15202b99",
-    "activityBarBadge.background": "#00bfbd",
+    "activityBar.background": "#da2a2a",
+    "activityBar.activeBorder": "#26d926",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#26d926",
     "activityBarBadge.foreground": "#15202b",
-    "titleBar.activeBackground": "#fffc00",
-    "titleBar.inactiveBackground": "#fffc0099",
-    "titleBar.activeForeground": "#15202b",
-    "titleBar.inactiveForeground": "#15202b99",
-    "statusBar.background": "#fffc00",
-    "statusBarItem.hoverBackground": "#ccca00",
-    "statusBar.foreground": "#15202b"
+    "titleBar.activeBackground": "#b21f1f",
+    "titleBar.inactiveBackground": "#b21f1f99",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "statusBar.background": "#b21f1f",
+    "statusBarItem.hoverBackground": "#da2a2a",
+    "statusBar.foreground": "#e7e7e7"
   },
-  "peacock.color": "#fffc00",
+  "peacock.color": "#b21f1f",
   "cSpell.words": [
     "Ducimus",
     "adipisicing",
