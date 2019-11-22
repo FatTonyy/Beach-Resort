@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import items from "./data";
+// import items from "./data";
+import Client from "./contentful";
 
 const RoomContext = React.createContext();
 //<RoomContext.Provider value={'Hello'}
@@ -20,25 +21,51 @@ class RoomProvider extends Component {
     breakfast: false,
     pets: false
   };
-  //!Get Data
+  //!Get Data from contentFull
+  getData = async () => {
+    try {
+      let response = await Client.getEntries({
+        content_type: "beachResort"
+      });
+      let rooms = this.formatData(response.items);
+      let featuredRooms = rooms.filter(room => room.featured === true);
+
+      //! filter setup
+      let maxPrice = Math.max(...rooms.map(item => item.price));
+      let maxSize = Math.max(...rooms.map(item => item.price));
+
+      this.setState({
+        rooms,
+        featuredRooms,
+        sortedRooms: rooms,
+        loading: false,
+        price: maxPrice,
+        maxPrice,
+        maxSize
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   componentDidMount() {
-    //this.getData
-    let rooms = this.formatData(items);
-    let featuredRooms = rooms.filter(room => room.featured === true);
+    this.getData();
+    // let rooms = this.formatData(items);
+    // let featuredRooms = rooms.filter(room => room.featured === true);
 
-    //! filter setup
-    let maxPrice = Math.max(...rooms.map(item => item.price));
-    let maxSize = Math.max(...rooms.map(item => item.price));
+    // //! filter setup
+    // let maxPrice = Math.max(...rooms.map(item => item.price));
+    // let maxSize = Math.max(...rooms.map(item => item.price));
 
-    this.setState({
-      rooms,
-      featuredRooms,
-      sortedRooms: rooms,
-      loading: false,
-      price: maxPrice,
-      maxPrice,
-      maxSize
-    });
+    // this.setState({
+    //   rooms,
+    //   featuredRooms,
+    //   sortedRooms: rooms,
+    //   loading: false,
+    //   price: maxPrice,
+    //   maxPrice,
+    //   maxSize
+    // });
   }
 
   formatData(items) {
